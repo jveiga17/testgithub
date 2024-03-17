@@ -55,7 +55,7 @@ function Home() {
             </p>
           </div>
           <div className="item">
-            <video src="./img/video.mp4" controls />
+            <video src="https://www.youtube.com/watch?v=3-9zECw26uk&ab_channel=M.D.L.R" controls />
           </div>
         </div>
       </div>
