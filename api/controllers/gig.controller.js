@@ -17,6 +17,7 @@ export const createGig = async (req, res, next) => {
     next(err);
   }
 };
+
 export const deleteGig = async (req, res, next) => {
   try {
     const gig = await Gig.findById(req.params.id);
