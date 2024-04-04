@@ -32,7 +32,7 @@ function Featured() {
             <button>Web Design</button>
             <button>WordPress</button>
             <button>Logo Design</button>
-            <button>AI Services</button>
+            <button>Services</button>
           </div>
         </div>
         <div className="right">
