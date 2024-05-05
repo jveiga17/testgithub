@@ -1,6 +1,4 @@
-
-
-import axios from "axios";
+import newRequest from './newRequest';
 
 const upload = async (file) => {
   const data = new FormData();
@@ -8,12 +6,11 @@ const upload = async (file) => {
   data.append("upload_preset", "fiverr");
 
   try {
-    const res = await axios.post("https://api.cloudinary.com/v1_1/joaoveiga/image/upload", data);
-
+    const res = await newRequest.post('/path/to/your/upload/endpoint', data); // Update the endpoint path
     const { url } = res.data;
     return url;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 
