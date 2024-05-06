@@ -28,13 +28,7 @@ const connect = async () => {
 const allowedOrigins = ['http://localhost:5173', process.env.FRONTEND_URL]; // Assuming you set process.env.FRONTEND_URL in your environment variables
 
 app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    },
+    origin: ["http://localhost:5173", "https://testgithub-7p32.onrender.com"], // Include your deployment URL
     credentials: true
 }));
 
