@@ -24,12 +24,9 @@ const connect = async () => {
   }
 };
 
-// Allow multiple origins or specific ones based on your needs
-const allowedOrigins = ['http://localhost:5173', process.env.FRONTEND_URL]; // Assuming you set process.env.FRONTEND_URL in your environment variables
-
 app.use(cors({
-    origin: ["http://localhost:5173", "https://testgithub-7p32.onrender.com"], // Include your deployment URL
-    credentials: true
+    origin: '*', // Allow all origins
+    credentials: true // Allow credentials
 }));
 
 app.use(express.json());
