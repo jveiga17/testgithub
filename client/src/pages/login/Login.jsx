@@ -13,13 +13,16 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await newRequest.post("/auth/login", { username, password });
-      localStorage.setItem("currentUser", JSON.stringify(res.data));
-      navigate("/")
+        const res = await newRequest.post("/auth/login", { username, password });
+        localStorage.setItem("currentUser", JSON.stringify(res.data));
+        navigate("/");
     } catch (err) {
-      setError(err.response.data);
+        // Check if the response and data are available, otherwise set a generic error message
+        const errorMessage = err.response && err.response.data ? err.response.data : "An error occurred during login.";
+        setError(errorMessage);
     }
-  };
+};
+
 
   return (
     <div className="login">
