@@ -6,6 +6,9 @@ const baseURL = process.env.REACT_APP_NODE_ENV === 'production'
     ? 'https://testgithub-7p32.onrender.com/api'
     : 'http://localhost:8800/api';
     */
+
+console.log(REACT_APP_NODE_ENV, "teste variable");
+
 const baseURL = 'https://testgithub-7p32.onrender.com/api'
 const newRequest = axios.create({
   baseURL: baseURL,
