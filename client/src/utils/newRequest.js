@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// Determine the baseURL based on the environment
-const baseURL = process.env.NODE_ENV === 'production' 
-    ? 'https://testgithub-7p32.onrender.com/api' 
+// Use the REACT_APP_ prefix for custom environment variables in a React app
+const baseURL = process.env.REACT_APP_NODE_ENV === 'production'
+    ? 'https://testgithub-7p32.onrender.com/api'
     : 'http://localhost:8800/api';
 
 const newRequest = axios.create({
