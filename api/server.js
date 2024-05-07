@@ -31,6 +31,8 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+console.log('Pasa por aca');
+
 app.use(express.json());
 app.use(cookieParser());
 
