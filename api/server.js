@@ -25,8 +25,8 @@ const connect = async () => {
 };
 
 app.use(cors({
-    origin: '*', // Allow all origins
-    credentials: true // Allow credentials
+    origin: ["http://localhost:5173", "https://testgithub-7p32.onrender.com"],
+    credentials: true
 }));
 
 app.use(express.json());
